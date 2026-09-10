@@ -1,0 +1,373 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;    
+}
+
+html{
+    
+    scroll-behavior: smooth;
+}
+
+html body{
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    background: url(bcgr.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+}
+.nav-bar{
+    position: fixed;
+    top: 35px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px;
+    border: 2px solid #efeee8;
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+
+.nav-bar ul{
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+.nav-bar .logo{
+    text-decoration: none;
+    color: #efeee8;
+}
+
+.nav-bar a{
+    text-decoration: none;
+    color: #efeee8;
+}
+
+.first-cont{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.first-cont .left-side h1{
+    font-size: 2.5rem;
+}
+
+.first-cont .left-side p{
+    margin-top: 15px;
+    color: #efeee8;
+    font-size: 1rem;
+}
+
+.first-cont .left-side{
+    color: #be9f75;
+    padding: 50px;
+}
+
+.first-cont .left-side button a{
+    text-decoration: none;
+    color: #262626;
+}
+
+.first-cont .left-side button{
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: #d2a777;
+    padding: 10px;
+    border: none;
+}
+
+.first-cont img{
+    width: 300px;
+    height: auto;
+    align-self: flex-end;
+    margin-right: 40px;
+    margin-left: 10px;
+    margin-top: 110px;
+    border-radius: 30px;
+}
+
+#trending{
+    color: #be9f75;
+    margin-top: 60px;
+    text-align: center;
+}
+
+#trending h3{
+    font-size: 3rem;
+}
+
+#trending p{
+    font-size: 1.3rem;
+}
+
+.scroll{
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 225px;
+    gap: 20px;
+
+    overflow-x: auto;
+    padding: 10px 7.5px;
+}
+
+.scroll img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+#trending .scroll .food{
+    margin-top: 15px;
+    border: 0.5px solid white;
+    border-radius: 10px;
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    transition: all 0.5s ease;
+    font-size: 1.2rem;
+
+}
+
+#trending .scroll .food p{
+    margin-top: 18px;
+    font-size: 1rem;
+}
+.scroll::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05); /* Ýeňilje dury fon */
+  border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: #fff; /* Dizaýnyňyzdaky altyn/sary reňk */
+  border-radius: 10px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: #d4b58b;
+}
+
+.scroll .food:hover{
+    scale: calc(1.055);
+    backdrop-filter: blur(3px);
+}
+
+#discounts{
+    margin-top: 60px;
+    text-align: center;
+    font-size: 2.8rem;
+    color: #d4b58b;
+}
+
+#discounts h3{
+    margin-bottom: 20px;
+}
+
+#discounts button{
+    margin-top: 20px;
+    padding: 10px 45px;
+    border: none;
+    border-radius: 10px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.35s ease;
+    color: #efeee8;
+}
+
+#discounts button:hover{
+    scale: calc(1.2);
+    background-color: #be9f75;
+}
+
+#gift-cards{
+    margin-top: 80px;
+    text-align: center;
+    font-size: 2.3rem;
+    color: #d4b58b;
+}
+
+#gift-cards .cards-container{
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    gap: 75px;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#gift-cards .cards-container .card{
+    font-size: 1rem;
+    border: 1px #d4b58b solid;
+    border-radius: 20px;
+    padding: 60px 60px;
+    backdrop-filter: blur(8px);
+    transition: all 0.3s ease;
+
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+}
+
+#gift-cards .cards-container .card:hover{
+    scale: calc(1.04);
+    backdrop-filter: blur(4px);
+}
+
+#gift-cards .cards-container .card button{
+    margin-top: 50px;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #d2a777;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#delivery .header{
+    color: #be9f75;
+    place-items: center;
+    margin-top: 80px;
+    font-size: 3rem;
+}
+
+.delivery-form{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    align-items: center;
+    color: #be9f75;
+    margin-top: 20px;
+    backdrop-filter: blur(15px);
+    margin: 30px;
+}
+
+.delivery-form .left-side2{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.delivery-form .left-side2 input{
+    padding: 10px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #d2a777;
+    color: white;
+}
+
+@media(max-width: 576px){
+
+    .nav-bar{
+        display: none;
+    }
+    .first-cont{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .first-cont .left-side h1{
+        font-size: 2.2rem;
+    }
+
+    .first-cont .sideImage img{
+        margin-top: 0px;
+    }
+
+    .scroll{
+        overflow-x: auto;
+    }
+
+    .scroll .food:hover{
+        scale: calc(1.04);
+    }
+
+    #gift-cards{
+        font-size: 1.75rem;
+    }
+
+    .delivery-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .delivery-form .left-side2 {
+        gap: 0;
+    }
+
+    .delivery-form .right-side2{
+        margin-top: 20px;
+        font-size: 0.8rem;
+    }
+
+}
+
+@media(min-width: 1024px){
+
+    .nav-bar{
+        padding: 30px;
+        font-size: 1.25rem;
+    }
+
+    .first-cont .left-side h1{
+        font-size: 3.5rem;
+    }
+
+    .first-cont .left-side p{
+        font-size: 1.5rem;
+    }
+
+    
+    .first-cont .sideImage img{
+        width: 400px;
+        right: 50px;
+    }
+
+    #gift-cards .cards-container {
+    grid-template-columns: 1fr;
+    gap: 25px;
+    margin: 50px;
+    padding: 45px 50px;
+    }
+
+    #gift-cards .cards-container .card p{
+        font-size: 1.5rem;
+    }
+
+    #delivery{
+        font-size: 1.5rem;
+    }
+}
